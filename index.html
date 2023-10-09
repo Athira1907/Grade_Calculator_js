@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="" id="myform">
+            <div class="input-field">
+                <label for="">Maths Score:</label>
+                <input type="text" id="maths" placeholder="enter score" name="mathsScore" >
+            </div>
+            <div class="input-field">
+                <label for="">Physics Score:</label>
+                <input type="text" id="physics" placeholder="enter score" name="physicsScore" >
+            </div>
+            <div class="input-field">
+                <label for="">Chemistry Score:</label>
+                <input type="text" id="chemistry" placeholder="enter score">
+            </div>
+            <div class="input-field">
+                <label for="">Biology Score:</label>
+                <input type="text" id="biology" placeholder="enter score">
+            </div>
+            <div class="input-field">
+                <label for="">English Score:</label>
+                <input type="text" id="english" placeholder="enter score">
+            </div>
+            <button onclick="getdata()" type="submit"  onsubmit="event()">Try it</button>
+        </form>
+        <div class="result">
+    <div class="percent">
+        <h4 id="mark-percent"></h4>
+        <h3 id="remark"></h3>
+    </div>
+        </div>
+    </div>
+    
+</body>
+<script type="text/javascript" src="./index.js"></script>
+</html>
