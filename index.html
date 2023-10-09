@@ -7,6 +7,42 @@
     <style>
         .container{
             display: flex;
+            justify-content: center;
+            align-items: center;
+            column-gap: 40px;
+            min-height: 100vh;
+        }
+        input{
+            border: none;
+            outline: none;
+            width: 300px;
+            height: 40px;
+            margin-bottom: 20px;
+           text-indent: 80px;
+            place-items: center;
+
+         
+        }
+        
+         ::placeholder{
+            color: rgb(102, 213, 233);
+            text-align: center;
+            font-size: 15px;
+        }
+        .result{
+            width: 500px;
+            height: 500px;
+            border-radius: 10px;
+            border: 1px solid #a7a3a300;
+            border-radius: 20px;
+         
+        }
+        .button{
+            width: 150px;
+            height: 40px;
+            border-radius: 6px;
+            border: none;
+            background-color:rgb(114, 209, 238);
         }
     </style>
 </head>
@@ -33,7 +69,7 @@
                 <label for="">English Score:</label>
                 <input type="text" id="english" placeholder="enter score">
             </div>
-            <button onclick="getdata()" type="submit"  onsubmit="event()">Try it</button>
+            <button onclick="getdata()" type="submit" class="button" onsubmit="event()">Try it</button>
         </form>
         <div class="result">
     <div class="percent">
