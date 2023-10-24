@@ -9,6 +9,8 @@
 // console.log(Maths2);
 //console.log(mathsValue);
 // document.write(mathsValue)
+
+
 const myform=document.getElementById('myform')
 function handleForm(event){
 event.preventDefault()
@@ -35,7 +37,8 @@ function getdata(){
     const englishValue=english.value
     const remark=document.getElementById('remark')
     const markpercent=document.getElementById('mark-percent')
-
+    const gifImage=document.getElementsByClassName('gif')
+    
     // console.log(maths);
     // console.log(physics);
     // console.log(chemistry);
@@ -52,23 +55,23 @@ function getdata(){
    console.log(percentage);
   // return percentage
   if(percentage>=90){
-    markpercent.innerText='S'
+    markpercent.innerText='your Grade : S'
     console.log('S');
   }
   else if(percentage>=80){
-    markpercent.innerText='A'
+    markpercent.innerText='your Grade : A'
     console.log('A');
   }
   else if(percentage>=70){
-    markpercent.innerText='B'
+    markpercent.innerText='your Grade : B'
     console.log('B');
   }
   else if(percentage>=60){
-    markpercent.innerText='C'
+    markpercent.innerText='your Grade : C'
     console.log('C');
   }
   else if(percentage>=50){
-    markpercent.innerText='D'
+    markpercent.innerText='your Grade : D'
     console.log('D');
   }
   else if(percentage>=40){
@@ -80,7 +83,7 @@ function getdata(){
     console.log('Failed');
   }
   remark.innerHTML=percentage
-
+gifImage.innerHTML=(percentage>40)?gifImage:"Unsatisfactory"
 }
 
 

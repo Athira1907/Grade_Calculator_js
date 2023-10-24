@@ -30,12 +30,24 @@
             font-size: 15px;
         }
         .result{
-            width: 500px;
+            width: 700px;
             height: 500px;
             border-radius: 10px;
-            border: 1px solid #a7a3a300;
+            /* border: 1px solid #a7a3a300; */
             border-radius: 20px;
-         
+         /* background-color: rgb(240, 243, 243); */
+         /* box-shadow:inset 20px 20px 20px 7px #0000; */
+         /* position: absolute; */
+         display: flex;
+         flex-direction: column;
+         column-gap: 10px;
+         justify-content: center;
+         align-items: center;
+    -webkit-box-shadow: inset 0px 0px 10px 7px #ffffff;
+    -moz-box-shadow: inset 0px 0px 10px 7px #fcfcfc;
+    -ms-box-shadow: inset 0px 0px 10px 7px #ffffff;
+    -o-box-shadow: inset 0px 0px 10px 7px #fdfdfd;
+    box-shadow: inset 0px 0px 10px 7px #ceeff3;    
         }
         .button{
             width: 150px;
@@ -43,6 +55,16 @@
             border-radius: 6px;
             border: none;
             background-color:rgb(114, 209, 238);
+        }
+        h3{
+            text-align: center;
+        }
+        .gif{
+            display: flex;
+            flex-direction: row;
+        }
+        #image-1{
+            transform: scaleX(-1);
         }
     </style>
 </head>
@@ -75,6 +97,10 @@
     <div class="percent">
         <h4 id="mark-percent"></h4>
         <h3 id="remark"></h3>
+        <div class="gif">
+            <img width="140px" height="140px" src="https://media.tenor.com/images/ce4e7484ae0727138d035eea8155f600/tenor.gif" alt="">
+            <img id="image-1" width="140px" height="140px" src="https://media.tenor.com/images/ce4e7484ae0727138d035eea8155f600/tenor.gif" alt="">
+        </div>
     </div>
         </div>
     </div>
