@@ -3,8 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Grade Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Agdasima&family=Hind+Vadodara&family=Orbitron&family=Oswald&family=Playfair+Display&family=Poppins:wght@300&family=Roboto+Condensed:ital,wght@1,300;1,400&family=Roboto:ital,wght@0,300;1,300&family=Tangerine:wght@700&display=swap" rel="stylesheet">
+
     <style>
+        *{
+            font-family: 'Hind Vadodara', sans-serif;
+        }
+        h2{
+            text-decoration: underline;
+            text-align: center;
+            color: rgb(20, 139, 160);
+            display: flex;
+           
+            align-items: center;
+            justify-content: center;
+        }
         .container{
             display: flex;
             justify-content: center;
@@ -25,9 +41,9 @@
         }
         
          ::placeholder{
-            color: rgb(102, 213, 233);
+            color: rgb(24, 154, 177);
             text-align: center;
-            font-size: 15px;
+            font-size: 18px;
         }
         .result{
             width: 700px;
@@ -47,7 +63,7 @@
     -moz-box-shadow: inset 0px 0px 10px 7px #fcfcfc;
     -ms-box-shadow: inset 0px 0px 10px 7px #ffffff;
     -o-box-shadow: inset 0px 0px 10px 7px #fdfdfd;
-    box-shadow: inset 0px 0px 10px 7px #ceeff3;    
+    box-shadow: inset 0px 0px 10px 7px #b1e9f0;    
         }
         .button{
             width: 150px;
@@ -70,35 +86,46 @@
         /* .gifimages{
             display: none;
         } */
+       
     </style>
 </head>
 <body>
+    <h2>Grade Calculator</h2>
     <div class="container">
-        <form action="" id="myform">
+        <form action="" id="myform" method="post">
             <div class="input-field">
                 <label for="">Maths Score:</label>
-                <input type="text" id="maths" placeholder="enter score" name="mathsScore" >
+                <input type="text" id="maths" placeholder="enter score" name="mathsScore" class="input" required>
             </div>
             <div class="input-field">
                 <label for="">Physics Score:</label>
-                <input type="text" id="physics" placeholder="enter score" name="physicsScore" >
+                <input type="text" id="physics" placeholder="enter score" name="physicsScore" class="input" required>
             </div>
             <div class="input-field">
                 <label for="">Chemistry Score:</label>
-                <input type="text" id="chemistry" placeholder="enter score">
+                <input type="text" id="chemistry" placeholder="enter score" class="input" required>
             </div>
             <div class="input-field">
                 <label for="">Biology Score:</label>
-                <input type="text" id="biology" placeholder="enter score">
+                <input type="text" id="biology" placeholder="enter score" class="input" required>
             </div>
             <div class="input-field">
                 <label for="">English Score:</label>
-                <input type="text" id="english" placeholder="enter score">
+                <input type="text" id="english" placeholder="enter score" class="input" required>
             </div>
-            <button onclick="getdata()" type="submit" class="button" onsubmit="event()">Try it</button>
+            <div class="input-field">
+                <label for="">Hindi Score:</label>
+                <input type="text" id="hindi" placeholder="enter score" class="input" required>
+            </div>                                                 
+                 <!--//onsubmit="handleForm()" -->
+            <button onclick="getdata()" type="submit" class="button" >Check Your Grade</button>
+            <button id="clearform" type="button" class="button" >Reset</button>
+
         </form>
+        <!--  onsubmit="event()" -->
         <div class="result">
     <div class="percent">
+        <h4 id="totalmarks" style="font-size: 30px;text-align: center;"></h4>
         <h4 id="mark-percent" style="font-size: 30px;text-align: center;"></h4>
         <h3 id="remark" style="font-size: 30px;text-align: center;"></h3>
         <div class="gif">
