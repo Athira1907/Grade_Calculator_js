@@ -54,13 +54,14 @@ var totalmarks=document.getElementById('totalmarks')
         remark.style.color='rgb(102, 213, 233)'
         remark.style.display="block"
        }
-      else if(mathsValue==0 || physicsValue==0 || chemistryValue==0 || biologyValue==0 || englishValue==0 || hindiValue==0){
+      else if(mathsValue==0 || physicsValue==0 || chemistryValue==0 || biologyValue==0 || englishValue==0 || hindiValue==0  
+        && mathsValue<40 || physicsValue<40 || chemistryValue<40 || biologyValue<40 || englishValue<40 || hindiValue<40){
         image.style.display="block"
         image2.style.display="none"
         remark.style.display="block"
         //markpercent.style.display="block"
         totalmarks.style.display="none"
-        remark.innerHTML=`you are failed`
+        remark.innerHTML=`you are failed <br> Pass mark for each subject: 40 /100`
         remark.style.color='red'
         // if(mathsValue==0){
         //     remark.innerText=`you are failed in Maths`
